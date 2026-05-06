@@ -35,10 +35,16 @@ export default function HomePage() {
     setSelectedCity(city);
   };
 
+  const handleCurrentLocation = () => {
+    setSelectedCity(null);
+  };
+
   return (
     <div className="min-h-screen" style={{ background: "var(--background)" }}>
       <Header
         onCitySelect={handleCitySelect}
+        onCurrentLocation={handleCurrentLocation}
+        activeCity={activeCity}
         isCelsius={isCelsius}
         onUnitToggle={() => setIsCelsius((p) => !p)}
       />
