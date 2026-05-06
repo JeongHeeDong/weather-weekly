@@ -42,8 +42,13 @@ function getRecent(): SearchResult[] {
 }
 
 function saveRecent(city: SearchResult) {
-  const prev = getRecent().filter((c) => c.id !== city.id);
-  localStorage.setItem(STORAGE_KEY, JSON.stringify([city, ...prev].slice(0, 5)));
+  if (!city.id || !city.name || typeof city.latitude !== "number" || typeof city.longitude !== "number") return;
+  try {
+    const prev = getRecent().filter((c) => c.id !== city.id);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify([city, ...prev].slice(0, 5)));
+  } catch {
+    // localStorage 용량 초과 등 무시
+  }
 }
 
 export function SearchBar({ onSelect }: Props) {
