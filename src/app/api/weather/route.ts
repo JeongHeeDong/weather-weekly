@@ -32,7 +32,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: "지원하지 않는 타임존입니다." }, { status: 400 });
   }
 
-  const cacheKey = `weather_${lat.toFixed(4)}_${lon.toFixed(4)}`;
+  const cacheKey = `weather_${lat.toFixed(4)}_${lon.toFixed(4)}_${tz}`;
   const cached = getCached(cacheKey);
   if (cached) {
     return NextResponse.json(cached);
