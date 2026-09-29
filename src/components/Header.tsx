@@ -26,7 +26,7 @@ export function Header({ onCitySelect, onCurrentLocation, activeCity, isCelsius,
     >
       <div className="max-w-4xl mx-auto flex items-center gap-3 flex-wrap">
         <div className="flex items-center gap-2 mr-auto">
-          <h1 className="text-xl font-bold">🌤 WeatherWeek</h1>
+          <h1 className="text-xl font-bold">🌤 주간 일기예보</h1>
           <span
             className="text-sm font-medium px-2 py-0.5 rounded-lg"
             style={{
