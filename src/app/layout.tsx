@@ -3,7 +3,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  title: "일기예보 - 주간 날씨 예보",
+  title: "주간 일기예보 - 주간 날씨 예보",
   description: "현재 위치 또는 원하는 도시의 7일간 날씨 예보",
 };
 
