@@ -27,7 +27,7 @@ export default function HomePage() {
   const activeLat = selectedCity?.latitude ?? geo.latitude ?? DEFAULT_CITY.latitude;
   const activeLon = selectedCity?.longitude ?? geo.longitude ?? DEFAULT_CITY.longitude;
   const activeTz = selectedCity?.timezone ?? DEFAULT_CITY.timezone;
-  const activeCity = selectedCity?.name ?? (geo.latitude ? "현재 위치" : DEFAULT_CITY.name);
+  const activeCity = selectedCity?.name ?? (geo.latitude ? "현재위치" : DEFAULT_CITY.name);
 
   const { data, isLoading, isError, refetch } = useWeather(activeLat, activeLon, activeTz);
 
